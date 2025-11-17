@@ -1,0 +1,14 @@
+DNS guide for mangwanexesibe.co.za
+----------------------------------
+
+After registering the domain, add these records in your registrar's DNS settings:
+1) CNAME record for 'www':
+   - Host/Name: www
+   - Type: CNAME
+   - Value/Target: <your-netlify-site>.netlify.app
+
+2) For the root domain (mangwanexesibe.co.za):
+   - If your registrar supports ALIAS or ANAME, create an ALIAS/ANAME pointing to <your-netlify-site>.netlify.app
+   - Otherwise use the A records provided by Netlify (they will show in the Netlify dashboard).
+
+Then in Netlify: Site > Domain management > Add custom domain > mangwanexesibe.co.za and follow instructions.
